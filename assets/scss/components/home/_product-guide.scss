@@ -1,0 +1,72 @@
+// .product-guide-section{
+//     padding-top: 290px;
+//     background: url(../images/bg/prpduct-guide-bg.png);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }
+
+.product-guide-section {
+  padding-top: 15%;
+  position: relative;
+  overflow: hidden;
+
+  .parallax-bg {
+    position: absolute;
+    inset: -290px 0;
+    background: url("../images/bg/prpduct-guide-bg.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
+.product-guide-inner {
+  background: url("../images/bg/pattern-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 80px 15px 0px 15px;
+
+  .section-title {
+    max-width: 630px;
+    margin: auto;
+  }
+
+  .download-btn {
+    max-width: 310px;
+    margin: 65px auto auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    .product-guide-section {
+        .section-title{
+            max-width: 520px;
+        }
+    }
+    .product-guide-inner{
+        padding-top: 70px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .product-guide-inner{
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+    .product-guide-inner {
+        .download-btn{
+            margin-top: 30px;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .product-guide-section {
+        .section-title{
+            max-width: 450px;
+        }
+    }
+    .product-guide-inner{
+        padding-top: 50px;
+    }
+}

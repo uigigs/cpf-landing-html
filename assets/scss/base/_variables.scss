@@ -1,0 +1,41 @@
+// ================================
+// Import Google Fonts
+// ================================
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+// ================================
+// Import custom Fonts
+// ================================
+@font-face {
+    font-family: "Quanta Grotesk Pro";
+    src: url('../fonts/QuantaGroteskPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// ================================
+// Color Map
+// ================================
+$colors: (
+  primaryColor: #64CCC9,
+  SecondaryColor: #012754,
+  OrangeColor: #EF6A00,
+  whiteColor: #ffffff,
+  blackColor: #000000,
+  dangerColor: #FF373A,
+);
+
+
+// ================================
+// Color Function
+// ================================
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @error "Color `#{$key}` not found in \$colors map.";
+  }
+}

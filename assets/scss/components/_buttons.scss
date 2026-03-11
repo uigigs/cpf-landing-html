@@ -1,0 +1,162 @@
+.custom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  height: 60px;
+  padding: 8px 28px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Funnel Display';
+
+  svg {
+    font-size: 25px;
+    stroke-width: 2px;
+  }
+
+  &.primary-btn {
+    background: color(primaryColor);
+    color: color(whiteColor);
+  }
+  &.secondary-btn {
+    background: color(whiteColor);
+    color: color(SecondaryColor);
+  }
+  &.orange-btn {
+    background: color(OrangeColor);
+    color: color(whiteColor);
+  }
+  &.btn-lg{
+    height: 70px;
+    padding: 8px 34px;
+  }
+}
+
+.hov-btn {
+  .btn-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 20px;
+    overflow: hidden;
+    transition: .3s;
+
+    span {
+      transform: translateY(-2px);
+      transition: .3s;
+    }
+  }
+
+  &:hover {
+    .btn-text {
+      span {
+        transform: translateY(-25px);
+      }
+    }
+
+  }
+}
+
+.icon-btn {
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 20px;
+    overflow: hidden;
+    transition: .3s;
+
+    svg {
+      transform: translateY(-2px);
+      transition: .3s;
+      min-height: 25px
+    }
+    .icon2 {
+        transform: translateX(-35px);
+    }
+  }
+
+  &:hover {
+    .btn-icon {
+      .icon1 {
+        transform: translateY(-20px) translateX(20px);
+      }
+      .icon2 {
+        transform: translateY(-27px) translateX(2px);
+      }
+    }
+
+  }
+}
+
+.reverse-hov-btn {
+  .btn-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 20px;
+    overflow: hidden;
+    transition: .3s;
+
+    span {
+      transform: translateY(5px);
+      transition: .3s;
+    }
+  }
+
+  &:hover {
+    .btn-text {
+      span {
+        transform: translateY(30px);
+      }
+    }
+
+  }
+}
+
+.back-to-top{
+  position: absolute;
+  right: 0;
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 25px;
+    overflow: hidden;
+    transition: .3s;
+    
+    span {
+      transform: translateY(-2px);
+      transition: .3s;
+    }
+  }
+
+  &:hover {
+    .btn-icon {
+      span {
+        transform: translateY(-30px);
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .custom-btn {
+    padding: 5px 20px;
+    &.btn-lg{
+      height: 50px;
+      padding: 5px 20px;
+    }
+  }
+}

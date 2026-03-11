@@ -1,0 +1,125 @@
+.simple-funding-section{
+    padding: 100px 0px;
+    .section-title{
+        max-width: 500px;
+        margin: auto;
+    }
+    .submit-btn{
+        margin: auto;
+        margin-top: 25px;
+        max-width: 230px;
+    }
+}
+
+.funding-step{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 30px;
+    .step{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #64CCC9B2;
+        color: color(primaryColor);
+        height: 50px;
+        min-width: 80px;
+        background: color(whiteColor);
+        font-family: "Quanta Grotesk Pro";
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    .text{
+        border: 1px dashed #0127544D;
+        background: color(whiteColor);
+        padding: 20px;
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        width: 100%;
+    }
+    &.step-1{
+        
+    }
+    &.step-2{
+        margin-top: 80px;
+    }
+    &.step-3{
+        margin-top: 80px;
+        flex-direction: row-reverse;
+    }
+    &.step-4{
+        flex-direction: row-reverse;
+    }
+    
+}
+
+@media only screen and (max-width: 1360px) {
+    .funding-step {
+        .step{
+            font-size: 15px;
+        }
+        .text{
+            font-size: 18px;
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .simple-funding-section{
+        padding: 80px 0px;
+        .submit-btn{
+            margin-top: 10px;
+        }
+    }
+    .funding-step {
+        .step{
+            font-size: 14px;
+            height: 40px;
+        }
+        .text{
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .simple-funding-section{
+        padding: 70px 0px;
+    }
+    .funding-step{
+        
+        &.step-2{
+            flex-direction: row-reverse;
+            margin-top: 0;
+        }
+        &.step-3{
+            flex-direction: row;
+            margin-top: 0;
+        }
+        &.step-4{
+            flex-direction: row-reverse;
+        }
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .simple-funding-section{
+        padding: 60px 0px;
+    }
+    .funding-step {
+        .step{
+            min-width: 75px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .funding-step{
+        flex-direction: row !important;
+        margin-bottom: 20px  !important;
+    }
+}

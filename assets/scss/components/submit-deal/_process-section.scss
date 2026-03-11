@@ -1,0 +1,111 @@
+.process-section{
+    padding-bottom: 100px;
+}
+
+.process-section-left{
+    background: #FFFFFF;
+    padding: 60px 50px;
+    
+    .title{
+        max-width: 350px;
+    }
+    
+    ul{
+        margin-top: 25px;
+        li{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 35px;
+                
+            .number{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 40px;
+                min-width: 40px;
+                max-height: 40px;
+                max-width: 40px;
+                font-family: "Funnel Display";
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0%;
+                text-align: center;
+                color: color(primaryColor);
+                background: #0127540D;
+                position: relative;
+                &::after{
+                    content: '';
+                    height: 25px;
+                    width: 1px;
+                    border-right: 1px dashed  #0127544D;
+                    position: absolute;
+                    top: 45px;
+                    left: 19px;
+                }
+
+            }
+            p{
+                font-family: "Funnel Display";
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+            &:nth-last-child(1){
+                margin-bottom: 0;
+                .number{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+.process-section-right{
+    padding: 60px 50px;
+    .title{
+        max-width: 350px;
+    }
+    ul{
+        margin-top: 25px;
+        li{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 26px;
+            .icon{
+                margin-top: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 22px;
+                max-width: 22px;
+            }
+            p{
+                font-family: "Funnel Display";
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+            &:nth-last-child(1){
+                margin-bottom: 0;
+                
+            }
+            
+        }
+        
+    }
+}

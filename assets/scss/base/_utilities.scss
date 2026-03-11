@@ -1,0 +1,73 @@
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  h2 {
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: color(SecondaryColor);
+    
+  }
+  p{
+    margin-bottom: 30px;
+    line-height: 150%;
+  }
+}
+h3{
+  &.title{
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: color(SecondaryColor);
+  }
+}
+@media only screen and (max-width: 1360px) {
+   .container{
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container{
+    max-width: 990px;
+  }
+  .section-title {
+    h2 {
+      font-size: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container{
+    max-width: 768px;
+  }
+  .section-title {
+    h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container{
+    max-width: 575px;
+  }
+  .section-title {
+    h2 {
+      font-size: 34px;
+    }
+  }
+}

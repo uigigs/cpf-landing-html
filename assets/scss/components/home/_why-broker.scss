@@ -1,0 +1,60 @@
+.why-broker-section{
+    padding: 100px 0px;
+    .section-title{
+        max-width: 420px;
+    }
+}
+
+.why-broker-content{
+    margin-bottom: -30px;
+}
+.why-broker-card{
+    background: #01275408;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    .card-icon{
+        min-height: 75px;
+        height: 100%;
+        min-width: 75px;
+        max-width: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0127540D;
+    }
+    .card-text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: color(SecondaryColor);
+        padding: 5px 18px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .why-broker-section{
+        padding: 80px 0px;
+        .section-title{
+            max-width: 400px;
+        }
+    }
+    
+}
+@media only screen and (max-width: 991px) {
+    .why-broker-section{
+        padding: 70px 0px
+    }
+}
+@media only screen and (max-width: 768px) {
+    .why-broker-section{
+        padding: 60px 0px
+    }
+    .why-broker-card {
+        .card-text{
+            font-size: 18px;
+        }
+    }
+}

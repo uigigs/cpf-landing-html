@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d;
+  }
+}
+
+body {
+  font-family: "Funnel Display";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0;
+  background: color(whiteColor);
+ 
+}
+
+.cpf-body {
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+  margin-bottom: 479px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-white {
+  color: color(whiteColor) !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-11 {
+  z-index: 11;
+}
+@for $i from 0 through 100 {
+   @if $i % 1 == 0{
+    .w-#{$i} {
+      width: $i * 1%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .cpf-body {
+    margin-bottom: 440px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  body{
+    font-size: 15px;
+  }
+  .cpf-body {
+    margin-bottom: 420px;
+  }
+}
+@media only screen and (max-width: 511px) {
+  .cpf-body {
+    margin-bottom: 480px;
+  }
+}

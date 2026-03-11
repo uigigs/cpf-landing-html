@@ -1,0 +1,105 @@
+.funding-across-section{
+    padding-bottom: 100px;
+    position: relative;
+    height: auto !important;
+    max-height: auto !important;
+    .section-title{
+        max-width: 590px;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+    }
+    .funding-across-images{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        .funding-across-left{
+            width: 50%;
+        }
+        .funding-across-right{
+            width: 50%;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .funding-across-img-1{
+            width: 22.92%;
+            margin-left: 32.82%;
+            margin-right: auto;
+        }
+        .funding-across-img-2{
+            width: 32.82%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        .funding-across-img-3{
+            width: 22.92%;
+            margin-right: 32.82%;
+            margin-left: auto;
+        }
+        .funding-across-img-4{
+            width: 32.82%;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
+.funding-across-map-img{
+    max-width: 70%;
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .funding-across-map-img{
+        max-width: 600px;
+        margin: auto;
+   }
+}
+@media only screen and (max-width: 1200px) {
+   .funding-across-section{
+        padding-bottom: 80px;
+        .section-title{
+            max-width: 500px;
+        }
+   }
+   .funding-across-map-img{
+        max-width: 500px;
+   }
+}
+@media only screen and (max-width: 991px) {
+   .funding-across-section{
+        padding-bottom: 70px;
+   }
+}
+@media only screen and (max-width: 768px) {
+   .funding-across-section{
+        padding-bottom: 60px;
+        .section-title{
+            max-width: 300px;
+        }
+        
+        .pin-spacer{
+            display: none !important;
+        }
+        .funding-across-images{
+            display: none;
+       }
+   }
+   
+}

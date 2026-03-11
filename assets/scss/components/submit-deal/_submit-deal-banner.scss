@@ -1,0 +1,118 @@
+.submit-deal-body {
+  background: #F2F4F6;
+}
+
+.submit-deal-banner {
+  background: color(SecondaryColor);
+  max-height: 760px;
+  min-height: 760px;
+  padding-top: 200px;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 307px;
+}
+
+.submit-deal-banner-inner {
+  position: relative;
+
+  h2 {
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: color(whiteColor);
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: color(whiteColor);
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: color(whiteColor);
+    margin-top: -75px;
+  }
+}
+
+.call-mail-btn {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  h6 {
+    font-family: "Quanta Grotesk Pro";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: color(SecondaryColor);
+  }
+
+  .call-mail {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    position: relative;
+    z-index: 11;
+    color: color(SecondaryColor);
+    background-color: #0127540D;
+    backdrop-filter: blur(20px);
+    max-width: max-content;
+    margin-bottom: 10px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      min-width: 50px;
+      max-height: 50px;
+      max-width: 50px;
+      background-color: color(primaryColor);
+      backdrop-filter: blur(10px);
+      img {
+        filter: brightness(100);
+      }
+    }
+
+    .text {
+      padding: 10px 15px 10px 20px;
+      font-weight: 700;
+      height: 50px;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 20px;
+    }
+  }
+}
+
+.submit-deal-form-card {
+  background: #FFFFFF;
+  width: 100%;
+  margin-left: auto;
+  padding: 50px 50px 70px 50px;
+  
+  .input-fild{
+    margin-bottom: 5.2px;
+  }
+
+  .title {
+    }
+}
