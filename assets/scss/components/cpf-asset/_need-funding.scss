@@ -1,0 +1,39 @@
+.need-funding-section{
+    background: url("../images/bg/need-funding-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+    height: 100vh;
+}
+
+.need-funding-card{
+    padding: 70px 50px;
+    backdrop-filter: blur(10px);
+    background: #FFFFFFE5;
+    max-width: 630px;
+    margin-left: auto;
+    .title{
+        max-width: 400px;
+        margin-bottom: 16px;
+    }
+    p{
+        color: #012754E5;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0%;
+        max-width: 493px;
+        margin-bottom: 35px;
+    }
+    .need-funding-btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        .custom-btn{
+            width: 50%;
+        }
+    }
+}

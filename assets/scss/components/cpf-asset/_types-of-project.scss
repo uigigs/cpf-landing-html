@@ -1,0 +1,35 @@
+.types-of-project{
+    padding: 100px 0px 70px 0px;
+    .title{
+        margin-bottom: 35px;
+    }
+}
+
+.types-card{
+    background: #01275408;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    .icon{
+        background: #01275408;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px;
+        min-width: 75px;
+        height: 100%;
+        
+    }
+    .text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px 20px;
+        color: color(SecondaryColor);
+    }
+}

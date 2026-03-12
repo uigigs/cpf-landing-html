@@ -2,21 +2,32 @@
     "use strict";
 
     // Register GSAP Plugin
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    let smoother;
 
     // smooth-scroll
     if (document.body.classList.contains("smooth-scroll")) {
-
-        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-        ScrollSmoother.create({
+        smoother = ScrollSmoother.create({
             wrapper: "#smooth-wrapper",
             content: "#smooth-content",
             smooth: 1,
-            effects: true
+            effects: true,
         });
-
     }
+
+    // handle nav link click
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target && smoother) {
+                smoother.scrollTo(target, true);
+            }
+        });
+    });
 
     // BannerParallax
     gsap.to(".banner-section", {
@@ -105,5 +116,42 @@
 
         });
 
+    }
+
+
+    gsap.to(".asset-banner-bg", {
+        y: "-30%",  // move slower than scroll
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".asset-banner",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+
+    // need-funding-section
+    const fundingSection = document.querySelector(".need-funding-section");
+    const fundingCard = document.querySelector(".need-funding-card");
+
+    if (fundingSection && fundingCard) {
+        const cardHeight = fundingCard.offsetHeight;
+        const sectionHeight = fundingSection.offsetHeight;
+
+        const maxMoveDistance = sectionHeight - cardHeight - 350;
+
+        gsap.to(fundingCard, {
+            y: maxMoveDistance,
+            ease: "none",
+            scrollTrigger: {
+                trigger: fundingSection,
+                start: "top 30%",
+                end: () => "+=" + maxMoveDistance,
+                scrub: true,
+                pin: fundingCard,
+                pinSpacing: false,
+            }
+        });
     }
 })(jQuery);

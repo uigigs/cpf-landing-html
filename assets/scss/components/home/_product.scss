@@ -15,10 +15,8 @@
 
 .product-card {
   background: color(whiteColor);
-  box-shadow: 0 8px 20px 0 #0000000F;
   margin-bottom: 30px;
   transition: 0.4s;
-
   .product-img {
     min-height: 190px;
     width: 100%;
@@ -55,6 +53,7 @@
   }
 
   &:hover {
+    box-shadow: 0 8px 20px 0 #0000000F;
     .product-img {
       &::before {
         transform: translate(-50%, -50%) rotate(45deg) scaleX(1);

@@ -1,0 +1,46 @@
+.lending-used{
+    padding: 100px 0px 70px 0px;
+    .title{
+        max-width: 480px;
+        margin-bottom: 35px;
+    }
+}
+
+.lending-used-card{
+    background: #FFFFFF;
+    padding: 25px;
+    margin-bottom: 30px;
+    .card-icon{
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0127540D;
+        margin-bottom: 45px;
+    }
+    h4{
+        font-family: "Funnel Display";
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: color(SecondaryColor);
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        white-space: nowrap; 
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    p{
+        color: #012754E5;
+        height: 110px;
+        max-width: 100%;
+        display: -webkit-box;
+        margin-bottom: 5px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-right: 10px;
+    }
+}
