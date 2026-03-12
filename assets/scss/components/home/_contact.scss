@@ -1,10 +1,19 @@
 .contact-section{
-    background: url(../images/bg/contact-bg.png);
-    background-size: cover;
+    // background: url(../images/bg/contact-bg.png);
+    // background-size: cover;
     // background-repeat: no-repeat;
-    background-position: top center;
+    // background-position: top center;
     padding: 120px 0px 100px 0px;
-    
+    position: relative;
+    .grid-pattern {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
 }
 
 .contact-card{
@@ -14,6 +23,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 .contact-card-left{
     padding: 50px 40px;

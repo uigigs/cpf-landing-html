@@ -1,0 +1,32 @@
+.why-dev-section{
+    
+}
+
+.why-dev-left{
+    background: #FFFFFF;
+    padding: 62px 50px;
+    
+}
+
+.why-dev-right{
+    padding: 62px 20px 62px 50px;
+    ul{
+        li{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 170%;
+            letter-spacing: 0%;
+            gap: 18px;
+            margin-bottom: 23px;
+
+            img{
+                width: 24px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+

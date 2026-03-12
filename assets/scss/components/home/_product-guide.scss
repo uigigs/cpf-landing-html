@@ -22,20 +22,32 @@
 }
 
 .product-guide-inner {
-  background: url("../images/bg/pattern-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+//   background: url("../images/bg/pattern-bg.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
   padding: 80px 15px 0px 15px;
-
+  position: relative;
+  .grid-pattern {
+    position: absolute;
+    z-index: 0;
+    bottom: -5px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
   .section-title {
     max-width: 630px;
     margin: auto;
+    position: relative;
+    z-index: 1;
   }
 
   .download-btn {
     max-width: 310px;
     margin: 65px auto auto;
+    position: relative;
+    z-index: 1;
   }
 }
 

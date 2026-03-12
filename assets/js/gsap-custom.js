@@ -61,7 +61,6 @@
     }
 
     // ====== Funding Across Section Scroll Animation ======
-    // ====== Funding Across Section Scroll Animation ======
     const section = document.querySelector("#fundingAcross");
     const mapImg = document.querySelector(".funding-across-map-img img");
     const images = document.querySelector(".funding-across-images");
@@ -99,13 +98,9 @@
                     })
                     // Move map + content up
                     .to([mapImg, content], {
-                        y: -100,
+                        y: 80,
                         ease: "power1.out"
                     });
-
-                // ===== 3️⃣ Section scroll continues after map/content animation =====
-                // No extra pin needed, images remain sticky
-
             }
 
         });

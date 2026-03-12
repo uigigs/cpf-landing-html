@@ -6,6 +6,7 @@
   }
 
   .custom-faq {
+    margin-bottom: -15px;
     .accordion-item {
       border: none;
       margin-bottom: 15px;
@@ -52,8 +53,38 @@
     .accordion-body {
       font-size: 16px;
       color: #012754E5;
-      padding: 0 25px 25px;
+      padding: 0 40px 30px 30px;
     }
 
   }
+}
+
+@media only screen and (max-width: 1200px) {
+    .faq-section{
+        padding-bottom: 80px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .faq-section{
+        padding-bottom: 70px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .faq-section{
+        padding-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .faq-section{
+        .custom-faq {
+          .accordion-button{
+            font-size: 16px;
+            padding: 20px 25px 20px 15px;
+            &::before{
+              right: 10px;
+              top: 11px;
+            }
+          }
+        }
+    }
 }

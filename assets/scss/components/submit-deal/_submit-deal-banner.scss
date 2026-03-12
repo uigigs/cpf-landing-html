@@ -15,6 +15,7 @@
 
 .submit-deal-banner-inner {
   position: relative;
+  z-index: 1;
 
   h2 {
     font-family: "Quanta Grotesk Pro";
@@ -52,6 +53,7 @@
 .call-mail-btn {
   margin-top: 70px;
   margin-bottom: 20px;
+
   h6 {
     font-family: "Quanta Grotesk Pro";
     font-weight: 600;
@@ -85,6 +87,7 @@
       max-width: 50px;
       background-color: color(primaryColor);
       backdrop-filter: blur(10px);
+
       img {
         filter: brightness(100);
       }
@@ -107,12 +110,123 @@
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 50px 50px 70px 50px;
-  
-  .input-fild{
+  padding: 50px 50px 70px;
+
+  .input-fild {
     margin-bottom: 5.2px;
   }
 
-  .title {
+  .title {}
+}
+@media only screen and (max-width: 1200px) {
+  .submit-deal-banner {
+    margin-bottom: 270px;
+    max-height: 730px;
+    min-height: 730px;
+  }
+
+  .submit-deal-banner-inner {
+    h2 {
+      font-size: 40px;
     }
+
+    h3 {
+      font-size: 32px;
+    }
+
+    img {
+      max-width: 380px;
+    }
+
+    h4 {
+      font-size: 32px;
+    }
+
+  }
+
+  .submit-deal-form-card {
+    padding: 30px 30px 50px;
+
+    .input-fild {
+      margin-bottom: 0;
+
+      label {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .call-mail-btn {
+    .call-mail {
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 991px) {
+  .submit-deal-banner {
+    padding-top: 150px;
+    background: transparent;
+    max-height: 100%;
+    min-height: auto;
+    margin-bottom: 70px;
+
+    &::after {
+      content: '';
+      height: 50%;
+      background: color(SecondaryColor);
+      height: 38.5%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+
+  .submit-deal-form-card {
+    margin-top: 30px;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  .submit-deal-banner {
+    &::after {
+      height: 33%;
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .submit-deal-banner {
+    padding-top: 120px;
+
+    &::after {
+      height: 30%;
+    }
+  }
+
+  .submit-deal-banner-inner {
+    h2 {
+      font-size: 36px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    img {
+      max-width: 300px;
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-top: -45px;
+    }
+  }
+  
+  .submit-deal-form-card{
+    padding: 30px 15px 40px 15px;
+  }
 }

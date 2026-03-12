@@ -535,11 +535,19 @@ h3.title {
   font-family: "Quanta Grotesk Pro";
   font-weight: 600;
   font-size: 36px;
-  line-height: 50px;
+  line-height: 138.88%;
   letter-spacing: 0%;
   text-transform: uppercase;
   margin-bottom: 15px;
   color: #012754;
+}
+
+.grid-pattern {
+  width: 100%;
+  height: 100vh;
+  background: #F9F9F9;
+  background-image: repeating-linear-gradient(to right, rgba(226, 226, 226, 0.9333333333) 0 1px, transparent 1px 80px), repeating-linear-gradient(to bottom, rgba(226, 226, 226, 0.9333333333) 0 1px, transparent 1px 80px), repeating-linear-gradient(to right, #F5F5F5 0 1px, transparent 1px 5px), repeating-linear-gradient(to bottom, #F5F5F5 0 1px, transparent 1px 5px);
+  background-size: 80px 80px, 80px 80px, auto, auto, auto, auto;
 }
 
 @media only screen and (max-width: 1360px) {
@@ -564,12 +572,15 @@ h3.title {
     margin-bottom: 16px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: 575px;
   }
   .section-title h2 {
     font-size: 34px;
+  }
+  h3.title {
+    font-size: 32px;
   }
 }
 .header-section {
@@ -1671,19 +1682,28 @@ h3.title {
 }
 
 .product-guide-inner {
-  background: url("../images/bg/pattern-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   padding: 80px 15px 0px 15px;
+  position: relative;
+}
+.product-guide-inner .grid-pattern {
+  position: absolute;
+  z-index: 0;
+  bottom: -5px;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .product-guide-inner .section-title {
   max-width: 630px;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 .product-guide-inner .download-btn {
   max-width: 310px;
   margin: 65px auto auto;
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1712,10 +1732,17 @@ h3.title {
   }
 }
 .contact-section {
-  background: url(../images/bg/contact-bg.png);
-  background-size: cover;
-  background-position: top center;
   padding: 120px 0px 100px 0px;
+  position: relative;
+}
+.contact-section .grid-pattern {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .contact-card {
@@ -1725,6 +1752,8 @@ h3.title {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-card-left {
@@ -1972,6 +2001,7 @@ h3.title {
 
 .submit-deal-banner-inner {
   position: relative;
+  z-index: 1;
 }
 .submit-deal-banner-inner h2 {
   font-family: "Quanta Grotesk Pro";
@@ -2059,10 +2089,93 @@ h3.title {
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 50px 50px 70px 50px;
+  padding: 50px 50px 70px;
 }
 .submit-deal-form-card .input-fild {
   margin-bottom: 5.2px;
+}
+@media only screen and (max-width: 1200px) {
+  .submit-deal-banner {
+    margin-bottom: 270px;
+    max-height: 730px;
+    min-height: 730px;
+  }
+  .submit-deal-banner-inner h2 {
+    font-size: 40px;
+  }
+  .submit-deal-banner-inner h3 {
+    font-size: 32px;
+  }
+  .submit-deal-banner-inner img {
+    max-width: 380px;
+  }
+  .submit-deal-banner-inner h4 {
+    font-size: 32px;
+  }
+  .submit-deal-form-card {
+    padding: 30px 30px 50px;
+  }
+  .submit-deal-form-card .input-fild {
+    margin-bottom: 0;
+  }
+  .submit-deal-form-card .input-fild label {
+    font-size: 14px;
+  }
+  .call-mail-btn .call-mail .text {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .submit-deal-banner {
+    padding-top: 150px;
+    background: transparent;
+    max-height: 100%;
+    min-height: auto;
+    margin-bottom: 70px;
+  }
+  .submit-deal-banner::after {
+    content: "";
+    height: 50%;
+    background: #012754;
+    height: 38.5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .submit-deal-form-card {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .submit-deal-banner::after {
+    height: 33%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .submit-deal-banner {
+    padding-top: 120px;
+  }
+  .submit-deal-banner::after {
+    height: 30%;
+  }
+  .submit-deal-banner-inner h2 {
+    font-size: 36px;
+  }
+  .submit-deal-banner-inner h3 {
+    font-size: 24px;
+  }
+  .submit-deal-banner-inner img {
+    max-width: 300px;
+  }
+  .submit-deal-banner-inner h4 {
+    font-size: 24px;
+    margin-top: -45px;
+  }
+  .submit-deal-form-card {
+    padding: 30px 15px 40px 15px;
+  }
 }
 .process-section {
   padding-bottom: 100px;
@@ -2165,11 +2278,69 @@ h3.title {
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1200px) {
+  .process-section {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .process-section {
+    padding-bottom: 70px;
+  }
+  .process-section-right {
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .process-section {
+    padding-bottom: 60px;
+  }
+  .process-section-left {
+    padding: 40px 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .process-section-left {
+    padding: 30px 15px;
+  }
+  .process-section-left ul li {
+    gap: 16px;
+  }
+  .process-section-left ul li .number {
+    font-size: 18px;
+    min-height: 30px;
+    min-width: 30px;
+    max-height: 30px;
+    max-width: 30px;
+  }
+  .process-section-left ul li .number::after {
+    top: 36px;
+    left: 14px;
+  }
+  .process-section-left ul li p {
+    font-size: 17px;
+    margin-top: 4px;
+  }
+  .process-section-right {
+    padding: 10px 0px;
+  }
+  .process-section-right ul li {
+    gap: 16px;
+  }
+  .process-section-right ul li p {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+}
 .faq-section {
   padding-bottom: 100px;
 }
 .faq-section .title {
   max-width: 400px;
+}
+.faq-section .custom-faq {
+  margin-bottom: -15px;
 }
 .faq-section .custom-faq .accordion-item {
   border: none;
@@ -2209,7 +2380,169 @@ h3.title {
 .faq-section .custom-faq .accordion-body {
   font-size: 16px;
   color: rgba(1, 39, 84, 0.8980392157);
-  padding: 0 25px 25px;
+  padding: 0 40px 30px 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .faq-section {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .faq-section {
+    padding-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .faq-section {
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .faq-section .custom-faq .accordion-button {
+    font-size: 16px;
+    padding: 20px 25px 20px 15px;
+  }
+  .faq-section .custom-faq .accordion-button::before {
+    right: 10px;
+    top: 11px;
+  }
+}
+.asset-banner {
+  padding-top: 200px;
+  position: relative;
+}
+.asset-banner::after {
+  content: "";
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(1, 39, 84, 0.6) 0%, #012754 100%);
+}
+.asset-banner::before {
+  content: "";
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background: url("../images/bg/asset-banner-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.asset-banner-left {
+  position: relative;
+  z-index: 2;
+  padding-right: 40px;
+}
+.asset-banner-left h2 {
+  font-family: "Quanta Grotesk Pro";
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.asset-banner-left h3 {
+  font-family: "Quanta Grotesk Pro";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin-bottom: 160px;
+}
+.asset-banner-left p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 177%;
+  letter-spacing: 0%;
+}
+
+.asset-banner-right {
+  position: relative;
+  z-index: 2;
+}
+
+.overview-card {
+  padding: 40px 50px 70px 50px;
+  background: #ffffff;
+}
+.overview-card ul {
+  margin-bottom: 40px;
+  margin-top: -20px;
+}
+.overview-card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 65px;
+  padding: 5px 0px;
+}
+.overview-card ul li::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(1, 39, 84, 0.04) 0%, rgba(1, 39, 84, 0.2) 50%, rgba(1, 39, 84, 0.04) 100%);
+  position: absolute;
+  bottom: 0;
+}
+.overview-card ul li span {
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: rgba(1, 39, 84, 0.6980392157);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45%;
+}
+.overview-card ul li strong {
+  font-size: 18px;
+  line-height: 145%;
+  text-align: right;
+  font-weight: 600;
+  color: #012754;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 55%;
+  margin-left: auto;
+}
+.overview-card .custom-btn {
+  max-width: 250px;
+}
+
+.why-dev-left {
+  background: #FFFFFF;
+  padding: 62px 50px;
+}
+
+.why-dev-right {
+  padding: 62px 20px 62px 50px;
+}
+.why-dev-right ul li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 170%;
+  letter-spacing: 0%;
+  gap: 18px;
+  margin-bottom: 23px;
+}
+.why-dev-right ul li img {
+  width: 24px;
+  margin-top: 5px;
 }
 
 .footer-section {
@@ -2297,7 +2630,7 @@ h3.title {
   gap: 20px;
   padding-top: 80px;
   position: relative;
-  padding-right: 40px;
+  padding-right: 45px;
   z-index: 1;
 }
 .footer-bottom p {
