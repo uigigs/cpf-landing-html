@@ -1571,7 +1571,6 @@ h3.title {
   padding-bottom: 100px;
   position: relative;
   height: auto !important;
-  max-height: auto !important;
 }
 .funding-across-section .section-title {
   max-width: 590px;

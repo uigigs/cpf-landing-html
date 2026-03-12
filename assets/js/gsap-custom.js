@@ -72,55 +72,66 @@
     }
 
     // ====== Funding Across Section Scroll Animation ======
+    // ===== Funding Across Section Scroll Animation =====
     const section = document.querySelector("#fundingAcross");
     const mapImg = document.querySelector(".funding-across-map-img img");
     const images = document.querySelector(".funding-across-images");
     const content = document.querySelector(".funding-across-content");
 
     if (section && mapImg && images && content) {
+
         content.style.paddingTop = "30px";
 
         ScrollTrigger.matchMedia({
 
             "(min-width: 768px)": function () {
 
-                // ===== 1️⃣ Pin the images container permanently =====
+                // ===== 1️⃣ Pin the whole section =====
                 ScrollTrigger.create({
                     trigger: section,
                     start: "top top",
-                    end: "center top",
-                    pin: images,
+                    end: "+=300",       // total scroll distance for animation
+                    pin: section,
                     pinSpacing: false
                 });
 
-                // ===== 2️⃣ Timeline for map shrink + content move =====
-                gsap.timeline({
+                // ===== 2️⃣ Timeline =====
+                const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
                         start: "top top",
-                        end: "+=400",   // scroll distance for map/content move
+                        end: "+=700",   // total scroll distance
                         scrub: true
                     }
+                });
+
+                // Step 1: shrink map from 1 → 0.5
+                tl.to(mapImg, {
+                    width: "70%",
+                    ease: "none",
+                    duration: 0.5
                 })
-                    // Shrink map
-                    .to(mapImg, {
-                        scale: 0.7,
-                        ease: "none"
-                    })
-                    // Move map + content up
+
+                    // Step 2: move map + content up by 100px
                     .to([mapImg, content], {
-                        y: 80,
-                        ease: "power1.out"
-                    });
+                        y: -200,
+                        ease: "power1.out",
+                        duration: 0.7,
+                        paddingBottom: "200px",
+                    })
+
             }
 
         });
 
     }
-
-
+    
+    
+    
+    
+    // asset-banner-bg
     gsap.to(".asset-banner-bg", {
-        y: "-30%", 
+        y: "-30%",
         ease: "none",
         scrollTrigger: {
             trigger: ".asset-banner",
@@ -134,14 +145,14 @@
     // ===== Need Funding Section Scroll Animation =====
     const fundingSection = document.querySelector(".need-funding-section");
     const fundingCard = document.querySelector(".need-funding-card");
-    
+
     if (fundingSection && fundingCard) {
-    
+
         const cardHeight = fundingCard.offsetHeight;
         const sectionHeight = fundingSection.offsetHeight;
-    
+
         const moveDistance = sectionHeight - cardHeight - 200;
-    
+
         gsap.to(fundingCard, {
             y: moveDistance,
             ease: "none",
@@ -153,6 +164,6 @@
                 invalidateOnRefresh: true
             }
         });
-    
+
     }
 })(jQuery);
