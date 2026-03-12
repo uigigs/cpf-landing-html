@@ -562,6 +562,9 @@ h3.title {
   .section-title h2 {
     font-size: 40px;
   }
+  h3.title {
+    font-size: 32px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .container {
@@ -1686,12 +1689,13 @@ h3.title {
 .product-guide-inner {
   padding: 80px 15px 0px 15px;
   position: relative;
+  overflow: hidden;
 }
 .product-guide-inner .grid-pattern {
   position: absolute;
   z-index: 0;
   bottom: -5px;
-  left: 0;
+  right: -7px;
   height: 100%;
   width: 100%;
 }
@@ -1998,7 +2002,7 @@ h3.title {
   overflow: visible;
   position: relative;
   z-index: 1;
-  margin-bottom: 307px;
+  margin-bottom: 300px;
 }
 
 .submit-deal-banner-inner {
@@ -2091,11 +2095,12 @@ h3.title {
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 50px 50px 70px;
+  padding: 42px 50px 70px 50px;
 }
 .submit-deal-form-card .input-fild {
   margin-bottom: 5.2px;
 }
+
 @media only screen and (max-width: 1200px) {
   .submit-deal-banner {
     margin-bottom: 270px;
@@ -2426,14 +2431,14 @@ h3.title {
 }
 .asset-banner .asset-banner-bg {
   width: 100%;
-  height: 600px;
+  height: 700px;
   position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
   background: url("../images/bg/asset-banner-bg.png");
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -2447,7 +2452,7 @@ h3.title {
   font-weight: 600;
   font-size: 50px;
   line-height: 130%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 30px;
@@ -2456,8 +2461,8 @@ h3.title {
   font-family: "Quanta Grotesk Pro";
   font-weight: 400;
   font-size: 36px;
-  line-height: 50px;
-  letter-spacing: 0%;
+  line-height: 138%;
+  letter-spacing: 0;
   color: #ffffff;
   margin-bottom: 160px;
 }
@@ -2465,7 +2470,7 @@ h3.title {
   font-weight: 500;
   font-size: 18px;
   line-height: 177%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 .asset-banner-right {
@@ -2474,7 +2479,7 @@ h3.title {
 }
 
 .overview-card {
-  padding: 40px 50px 70px 50px;
+  padding: 40px 50px 70px;
   background: #ffffff;
 }
 .overview-card ul {
@@ -2487,7 +2492,7 @@ h3.title {
   justify-content: space-between;
   position: relative;
   min-height: 65px;
-  padding: 5px 0px;
+  padding: 5px 0;
 }
 .overview-card ul li::after {
   content: "";
@@ -2498,7 +2503,7 @@ h3.title {
   bottom: 0;
 }
 .overview-card ul li span {
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: rgba(1, 39, 84, 0.6980392157);
   display: flex;
@@ -2522,13 +2527,97 @@ h3.title {
   max-width: 250px;
 }
 
+@media only screen and (max-width: 1360px) {
+  .asset-banner-left h2 {
+    font-size: 45px;
+  }
+  .asset-banner-left h3 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .asset-banner {
+    padding-top: 160px;
+  }
+  .asset-banner .asset-banner-bg {
+    height: 560px;
+  }
+  .asset-banner::after {
+    height: 480px;
+  }
+  .asset-banner-left h2 {
+    font-size: 36px;
+  }
+  .asset-banner-left h3 {
+    font-size: 28px;
+  }
+  .overview-card {
+    padding: 30px 30px 50px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .asset-banner {
+    padding-top: 140px;
+  }
+  .asset-banner .asset-banner-bg {
+    height: 500px;
+  }
+  .asset-banner::after {
+    height: 450px;
+  }
+  .asset-banner-left {
+    max-width: 520px;
+  }
+  .asset-banner-left h2 {
+    font-size: 40px;
+  }
+  .asset-banner-left h3 {
+    font-size: 32px;
+    margin-bottom: 100px;
+  }
+  .overview-card {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .asset-banner .asset-banner-bg {
+    height: 450px;
+  }
+  .asset-banner::after {
+    height: 400px;
+  }
+  .asset-banner-left h2 {
+    font-size: 32px;
+    max-width: 420px;
+  }
+  .asset-banner-left h3 {
+    font-size: 26px;
+    margin-bottom: 80px;
+    max-width: 420px;
+  }
+}
+@media only screen and (max-width: 444px) {
+  .asset-banner .asset-banner-bg {
+    height: 490px;
+  }
+  .asset-banner::after {
+    height: 440px;
+  }
+}
 .why-dev-left {
   background: #FFFFFF;
   padding: 62px 50px;
 }
+.why-dev-left .title {
+  max-width: 400px;
+}
 
 .why-dev-right {
   padding: 62px 20px 10px 50px;
+}
+.why-dev-right .title {
+  max-width: 450px;
 }
 .why-dev-right ul li {
   display: flex;
@@ -2541,11 +2630,35 @@ h3.title {
   gap: 18px;
   margin-bottom: 23px;
 }
+.why-dev-right ul li:nth-last-child(1) {
+  margin-bottom: 0;
+}
 .why-dev-right ul li img {
   width: 24px;
   margin-top: 5px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .why-dev-right ul li {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .why-dev-right {
+    padding: 50px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .why-dev-left {
+    padding: 40px 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .why-dev-left {
+    padding: 30px 15px;
+  }
+}
 .lending-used {
   padding: 100px 0px 70px 0px;
 }
@@ -2593,6 +2706,31 @@ h3.title {
   padding-right: 10px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .lending-used {
+    padding: 80px 0px 50px 0px;
+  }
+  .lending-used .title {
+    max-width: 400px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .lending-used {
+    padding: 70px 0px 40px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .lending-used {
+    padding: 60px 0px 30px 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .lending-used-card p {
+    height: auto;
+    max-width: 400px;
+  }
+}
 .need-funding-section {
   background: url("../images/bg/need-funding-bg.png");
   background-size: cover;
@@ -2633,6 +2771,24 @@ h3.title {
   width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+  .need-funding-card p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .need-funding-card {
+    padding: 40px 20px;
+  }
+  .need-funding-card .need-funding-btn {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .need-funding-card .need-funding-btn .custom-btn {
+    width: 100%;
+  }
+}
 .types-of-project {
   padding: 100px 0px 70px 0px;
 }
@@ -2668,6 +2824,25 @@ h3.title {
   color: #012754;
 }
 
+@media only screen and (max-width: 1200px) {
+  .types-of-project {
+    padding: 80px 0px 50px 0px;
+  }
+  .types-card .text {
+    font-size: 18px;
+    padding: 5px 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .types-of-project {
+    padding: 70px 0px 40px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .types-of-project {
+    padding: 60px 0px 30px 0px;
+  }
+}
 .footer-section {
   background: url("../images/bg/footer-bg.png");
   background-size: cover;

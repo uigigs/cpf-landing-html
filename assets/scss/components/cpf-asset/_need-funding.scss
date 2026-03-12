@@ -37,3 +37,26 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .need-funding-card{
+        p{
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .need-funding-card{
+        padding: 40px 20px;
+        .need-funding-btn{
+            flex-wrap: wrap;
+            gap: 20px;
+            .custom-btn{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+

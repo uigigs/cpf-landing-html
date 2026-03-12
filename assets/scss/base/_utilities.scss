@@ -92,6 +92,11 @@ h3{
       font-size: 40px;
     }
   }
+  h3{
+    &.title{
+      font-size: 32px;
+    }
+  }
 }
 @media only screen and (max-width: 991px) {
   .container{

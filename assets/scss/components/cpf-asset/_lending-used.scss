@@ -44,3 +44,34 @@
         padding-right: 10px;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .lending-used{
+        padding: 80px 0px 50px 0px;
+        .title{
+            max-width: 400px;
+            margin-bottom: 25px;
+        }
+    }
+    
+    
+}
+@media only screen and (max-width: 991px) {
+    .lending-used{
+        padding: 70px 0px 40px 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .lending-used{
+        padding: 60px 0px 30px 0px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .lending-used-card {
+        p{
+            height: auto;
+            max-width: 400px;
+        }
+    }
+}

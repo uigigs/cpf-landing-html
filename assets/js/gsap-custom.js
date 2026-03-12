@@ -120,7 +120,7 @@
 
 
     gsap.to(".asset-banner-bg", {
-        y: "-30%",  // move slower than scroll
+        y: "-30%", 
         ease: "none",
         scrollTrigger: {
             trigger: ".asset-banner",
@@ -131,27 +131,28 @@
     });
 
 
-    // need-funding-section
+    // ===== Need Funding Section Scroll Animation =====
     const fundingSection = document.querySelector(".need-funding-section");
     const fundingCard = document.querySelector(".need-funding-card");
-
+    
     if (fundingSection && fundingCard) {
+    
         const cardHeight = fundingCard.offsetHeight;
         const sectionHeight = fundingSection.offsetHeight;
-
-        const maxMoveDistance = sectionHeight - cardHeight - 350;
-
+    
+        const moveDistance = sectionHeight - cardHeight - 200;
+    
         gsap.to(fundingCard, {
-            y: maxMoveDistance,
+            y: moveDistance,
             ease: "none",
             scrollTrigger: {
                 trigger: fundingSection,
-                start: "top 30%",
-                end: () => "+=" + maxMoveDistance,
-                scrub: true,
-                pin: fundingCard,
-                pinSpacing: false,
+                start: "top bottom",   // animation starts when section enters screen
+                end: "bottom top",     // animation ends when section leaves
+                scrub: 1,
+                invalidateOnRefresh: true
             }
         });
+    
     }
 })(jQuery);

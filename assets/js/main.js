@@ -43,5 +43,7 @@
             if (!valid) e.preventDefault();
         });
     });
+    
+    new WOW().init();
 
 })(jQuery);

@@ -10,7 +10,7 @@
   overflow: visible;
   position: relative;
   z-index: 1;
-  margin-bottom: 307px;
+  margin-bottom: 300px;
 }
 
 .submit-deal-banner-inner {
@@ -110,13 +110,12 @@
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 50px 50px 70px;
+  padding: 42px 50px 70px 50px;
 
   .input-fild {
     margin-bottom: 5.2px;
   }
 
-  .title {}
 }
 @media only screen and (max-width: 1200px) {
   .submit-deal-banner {
