@@ -159,7 +159,7 @@
             scrollTrigger: {
                 trigger: fundingSection,
                 start: "top bottom",   // animation starts when section enters screen
-                end: "bottom top",     // animation ends when section leaves
+                end: "bottom 70%",     // animation ends when section leaves
                 scrub: 1,
                 invalidateOnRefresh: true
             }
