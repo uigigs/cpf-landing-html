@@ -256,6 +256,7 @@
 @media only screen and (max-width: 1360px) {
   .header-inner {
     .header-left {
+    gap: 50px;
       .logo {
         max-width: 160px;
       }
@@ -271,7 +272,7 @@
       gap: 30px;
 
       .logo {
-        max-width: 130px;
+        max-width: 130px !important;
       }
     }
 
