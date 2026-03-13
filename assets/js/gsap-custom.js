@@ -125,10 +125,8 @@
         });
 
     }
-    
-    
-    
-    
+
+
     // asset-banner-bg
     gsap.to(".asset-banner-bg", {
         y: "-30%",
@@ -143,45 +141,38 @@
 
 
     // ===== Need Funding Section Scroll Animation =====
-    const fundingSection = document.querySelector(".need-funding-section");
-    const fundingCard = document.querySelector(".need-funding-card");
+    const FlotingSection = document.querySelector(".need-funding-section");
+    const card = document.querySelector(".need-funding-card");
 
-    if (fundingSection && fundingCard) {
+    if (FlotingSection && card) {
 
-        const cardHeight = fundingCard.offsetHeight;
-        const sectionHeight = fundingSection.offsetHeight;
-
-        const moveDistance = sectionHeight - cardHeight - 200;
-
-        gsap.to(fundingCard, {
-            y: moveDistance,
-            ease: "none",
-            scrollTrigger: {
-                trigger: fundingSection,
-                start: "top bottom",   // animation starts when section enters screen
-                end: "bottom 70%",     // animation ends when section leaves
-                scrub: 1,
-                invalidateOnRefresh: true
-            }
+        // === Scroll Down Effect ===
+        ScrollTrigger.create({
+            trigger: FlotingSection,
+            start: "top 300",
+            end: () => `bottom 900`,
+            pin: card,
+            pinSpacing: false,
+            scrub: true
         });
-
     }
-    
-    
+
+
+
     // fade up elements
     gsap.utils.toArray(".banner-section h1, .banner-section h3").forEach((el, i) => {
 
-    gsap.from(el, {
-        y: 60,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        delay: i * 0.2,
-        scrollTrigger: {
-            trigger: ".banner-section",
-            start: "top 80%",
-        }
-    });
+        gsap.from(el, {
+            y: 60,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out",
+            delay: i * 0.2,
+            scrollTrigger: {
+                trigger: ".banner-section",
+                start: "top 80%",
+            }
+        });
 
-});
+    });
 })(jQuery);

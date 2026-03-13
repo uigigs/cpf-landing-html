@@ -1285,6 +1285,7 @@ h3.title {
 .product-card .product-data ul li span {
   opacity: 70%;
   font-size: 13px;
+  text-transform: uppercase;
 }
 .product-card .product-data ul li strong {
   font-weight: 600;
@@ -2594,12 +2595,23 @@ h3.title {
     margin-bottom: 70px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .overview-card ul li strong {
+    font-size: 15px;
+  }
+}
 @media only screen and (max-width: 575px) {
   .asset-banner .asset-banner-bg {
     height: 450px;
   }
   .asset-banner::after {
     height: 400px;
+  }
+  .overview-card {
+    padding-bottom: 40px;
+  }
+  .overview-card ul {
+    margin-bottom: 25px;
   }
   .asset-banner-left h2 {
     font-size: 32px;
@@ -2761,6 +2773,7 @@ h3.title {
   background: rgba(255, 255, 255, 0.8980392157);
   max-width: 630px;
   margin-left: auto;
+  z-index: 999999;
 }
 .need-funding-card .title {
   max-width: 400px;
@@ -2785,7 +2798,17 @@ h3.title {
   width: 50%;
 }
 
+@media only screen and (max-width: 991px) {
+  .need-funding-section {
+    height: auto;
+    padding: 70px 0px;
+  }
+}
 @media only screen and (max-width: 768px) {
+  .need-funding-section {
+    height: auto;
+    padding: 60px 0px;
+  }
   .need-funding-card p {
     font-size: 16px;
     margin-bottom: 25px;

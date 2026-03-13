@@ -14,6 +14,7 @@
     background: #FFFFFFE5;
     max-width: 630px;
     margin-left: auto;
+    z-index: 999999;
     .title{
         max-width: 400px;
         margin-bottom: 16px;
@@ -38,13 +39,24 @@
     }
 }
 
+@media only screen and (max-width: 991px) {
+    .need-funding-section{
+        height: auto;
+        padding: 70px 0px; 
+    }
+}
 @media only screen and (max-width: 768px) {
+    .need-funding-section{
+        height: auto;
+        padding: 60px 0px; 
+    }
     .need-funding-card{
         p{
             font-size: 16px;
             margin-bottom: 25px;
         }
     }
+    
 }
 @media only screen and (max-width: 575px) {
     .need-funding-card{
