@@ -114,19 +114,6 @@
 
     });
 
-    document.querySelectorAll('.menu a').forEach(link => {
-        link.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                gsap.to(window, {
-                    duration: 1,
-                    scrollTo: target
-                });
-            }
-        });
-    });
-
 
     new WOW().init();
 
