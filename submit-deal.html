@@ -22,109 +22,116 @@
 </head>
 
 <body class="smooth-scroll">
+    <!-- header section -->
+    <header class="header-section header-white" id="headerSection">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-left">
+                    <a href="./index.html" class="logo"><img src="./assets/images/logo/logo-white.png" alt="img"
+                            class="white-logo"> <img src="./assets/images/logo/logo.png" alt="img" class="dark-logo">
+                    </a>
+                    <a href="tel:+07 4439 9644" class="call">
+                        <div class="call-icon"><img src="./assets/images/icons/call.svg" alt="icon"></div>
+                        <div class="number">07 4439 9644</div>
+                    </a>
+                </div>
+                <div class="header-right">
+                    <ul class="menu">
+                        <li><a href="./index.html#productSection">Lending Products</a></li>
+                        <li><a href="./index.html#WhyUs">Why us</a></li>
+                        <li><a href="./index.html#FundingProcess">Funding Process</a></li>
+                        <li><a href="./index.html#productGuide">Product Guide</a></li>
+                    </ul>
+                    <a href="./index.html#Contactus" class="header-btn primary-btn custom-btn hov-btn icon-btn">
+                        <span class="btn-text">
+                            <span>Contact us </span>
+                            <span>Contact us </span>
+                        </span>
+                        <div class="btn-icon">
+                            <span class="iconify icon1" data-icon="system-uicons:arrow-top-right" width="24"></span>
+                            <span class="iconify icon2" data-icon="system-uicons:arrow-top-right" width="24"></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- mobiel menu -->
+                <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="iconify" data-icon="ri:menu-3-line"></span>
+                </button>
+
+
+            </div>
+        </div>
+
+    </header>
+    <!-- mobile menu drawer -->
+    <div class="mobile-menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+
+            <div class="offcanvas-header mobile-menu-header">
+                <a href="./index.html" class="logo mobile-menu-logo"><img src="./assets/images/logo/logo.png"
+                        alt="img"></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+
+                <ul class="menu">
+                    <li><a href="./index.html#productSection" data-bs-dismiss="offcanvas">Lending Products</a></li>
+                    <li><a href="./index.html#WhyUs" data-bs-dismiss="offcanvas">Why us</a></li>
+                    <li><a href="./index.html#FundingProcess" data-bs-dismiss="offcanvas">Funding Process</a></li>
+                    <li><a href="./index.html#productGuide" data-bs-dismiss="offcanvas">Product Guide</a></li>
+                </ul>
+
+                <a href="./index.html#Contactus" class="header-btn primary-btn custom-btn hov-btn icon-btn"
+                    data-bs-dismiss="offcanvas">
+                    <span class="btn-text">
+                        <span>Contact us </span>
+                        <span>Contact us </span>
+                    </span>
+                    <div class="btn-icon">
+                        <span class="iconify icon1" data-icon="system-uicons:arrow-top-right"></span>
+                        <span class="iconify icon2" data-icon="system-uicons:arrow-top-right"></span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <div class="cpf-body submit-deal-body">
-                <!-- header section -->
-                <header class="header-section header-white" id="headerSection">
-                    <div class="container">
-                        <div class="header-inner">
-                            <div class="header-left">
-                                <a href="./index.html" class="logo"><img src="./assets/images/logo/logo-white.png" alt="img"></a>
-                                <a href="tel:+07 4439 9644" class="call">
-                                    <div class="call-icon"><img src="./assets/images/icons/call.svg" alt="icon"></div>
-                                    <div class="number">07 4439 9644</div>
-                                </a>
-                            </div>
-                            <div class="header-right">
-                                <ul class="menu">
-                                    <li><a href="./index.html#productSection">Lending Products</a></li>
-                                    <li><a href="./index.html#WhyUs">Why us</a></li>
-                                    <li><a href="./index.html#FundingProcess">Funding Process</a></li>
-                                    <li><a href="./index.html#productGuide">Product Guide</a></li>
-                                </ul>
-                                <a href="./index.html#Contactus" class="header-btn primary-btn custom-btn hov-btn icon-btn">
-                                    <span class="btn-text">
-                                        <span>Contact us </span>
-                                        <span>Contact us </span>
-                                    </span>
-                                    <div class="btn-icon">
-                                        <span class="iconify icon1" data-icon="system-uicons:arrow-top-right"
-                                            width="24"></span>
-                                        <span class="iconify icon2" data-icon="system-uicons:arrow-top-right"
-                                            width="24"></span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- mobiel menu -->
-                            <button class="menu-btn" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#mobileMenu">
-                                <span class="iconify" data-icon="ri:menu-3-line"></span>
-                            </button>
-
-
-                        </div>
-                    </div>
-                    <!-- mobile menu drawer -->
-                    <div class="mobile-menu">
-                        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
-
-                            <div class="offcanvas-header mobile-menu-header">
-                                <a href="./index.html" class="logo mobile-menu-logo"><img src="./assets/images/logo/logo.png"
-                                        alt="img"></a>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                            </div>
-
-                            <div class="offcanvas-body">
-
-                                <ul class="menu">
-                                    <li><a href="./index.html#productSection" data-bs-dismiss="offcanvas">Lending Products</a></li>
-                                    <li><a href="./index.html#WhyUs" data-bs-dismiss="offcanvas">Why us</a></li>
-                                    <li><a href="./index.html#FundingProcess" data-bs-dismiss="offcanvas">Funding Process</a></li>
-                                    <li><a href="./index.html#productGuide" data-bs-dismiss="offcanvas">Product Guide</a></li>
-                                </ul>
-
-                                <a href="./index.html#Contactus" class="header-btn primary-btn custom-btn hov-btn icon-btn" data-bs-dismiss="offcanvas">
-                                    <span class="btn-text">
-                                        <span>Contact us </span>
-                                        <span>Contact us </span>
-                                    </span>
-                                    <div class="btn-icon">
-                                        <span class="iconify icon1" data-icon="system-uicons:arrow-top-right"></span>
-                                        <span class="iconify icon2" data-icon="system-uicons:arrow-top-right"></span>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </header>
-
                 <!-- Submit a Deal Banner section -->
                 <section class="submit-deal-banner">
                     <div class="container">
                         <div class="row m-0">
                             <div class="col-lg-6 p-0">
                                 <div class="submit-deal-banner-inner">
-                                    <h2 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Submit a Deal</h2>
-                                    <h3 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Letters of Offer in 48 Hours ⏰</h3>
+                                    <h2 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Submit a
+                                        Deal</h2>
+                                    <h3 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Letters of
+                                        Offer in 48 Hours ⏰</h3>
 
                                     <img src="./assets/images/img/women-2.png" alt="img" class="">
-                                    <h4 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Need to speak to Anna?</h4>
+                                    <h4 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Need to
+                                        speak to Anna?</h4>
 
-                                    <div class="call-mail-btn wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                    <div class="call-mail-btn wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.3s">
                                         <h6>Call Anna</h6>
                                         <a href="tel:+0744399644" class="call-mail">
-                                            <div class="icon"><img src="./assets/images/icons/call.svg" alt="icon"></div>
+                                            <div class="icon"><img src="./assets/images/icons/call.svg" alt="icon">
+                                            </div>
                                             <div class="text">07 4439 9644</div>
                                         </a>
                                     </div>
-                                    <div class="call-mail-btn mt-0 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                    <div class="call-mail-btn mt-0 wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.3s">
                                         <h6>Email Anna</h6>
                                         <a href="mailto:anna@commercialpropertyfunding.com.au" class="call-mail">
-                                            <div class="icon"><img src="./assets/images/icons/mail.svg" alt="icon"></div>
+                                            <div class="icon"><img src="./assets/images/icons/mail.svg" alt="icon">
+                                            </div>
                                             <div class="text">anna@commercialpropertyfunding.com.au</div>
                                         </a>
                                     </div>
@@ -161,7 +168,8 @@
                                                 <div class="input-fild">
                                                     <span class="required">Required</span>
                                                     <label for="Company">Company <span>*</span></label>
-                                                    <input type="text" name="Company" placeholder="Your company  name" required>
+                                                    <input type="text" name="Company" placeholder="Your company  name"
+                                                        required>
                                                 </div>
                                             </div>
                                             <div class="col-xl-6 col-lg-12 col-md-6">
@@ -185,7 +193,8 @@
                                                     <span class="required">Required</span>
                                                     <label for="FundingType">Funding Type <span>*</span></label>
                                                     <input type="text" name="FundingType"
-                                                        placeholder="e.g. Construction finance, land subdivision" required>
+                                                        placeholder="e.g. Construction finance, land subdivision"
+                                                        required>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -225,7 +234,8 @@
                         <div class="row m-0">
                             <div class="col-lg-6 p-0">
                                 <div class="process-section-left">
-                                    <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">HOW THE PROCESS WORKS</h3>
+                                    <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">HOW
+                                        THE PROCESS WORKS</h3>
                                     <ul>
                                         <li class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                             <div class="number">01</div>
@@ -248,7 +258,8 @@
                             </div>
                             <div class="col-lg-6 p-0">
                                 <div class="process-section-right">
-                                    <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">DOCUMENTS WE MAY REQUEST</h3>
+                                    <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                                        DOCUMENTS WE MAY REQUEST</h3>
                                     <ul>
                                         <li class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                             <div class="icon"><img src="./assets/images/icons/ruler&pen.svg" alt="icon">
@@ -286,13 +297,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">HOW THE PROCESS WORKS</h3>
+                                <h3 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">HOW THE
+                                    PROCESS WORKS</h3>
                             </div>
                             <div class="col-lg-6">
-                                <div class="accordion custom-faq wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" id="faqAccordion">
+                                <div class="accordion custom-faq wow animate__animated animate__fadeInUp"
+                                    data-wow-delay="0.3s" id="faqAccordion">
 
                                     <!-- item -->
-                                    <div class="accordion-item wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                                    <div class="accordion-item wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.2s">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" data-bs-toggle="collapse"
                                                 data-bs-target="#faq1">
@@ -309,7 +323,8 @@
                                     </div>
 
                                     <!-- item -->
-                                    <div class="accordion-item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                    <div class="accordion-item wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.3s">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button" data-bs-toggle="collapse"
                                                 data-bs-target="#faq2">
@@ -326,7 +341,8 @@
                                     </div>
 
                                     <!-- item -->
-                                    <div class="accordion-item wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                                    <div class="accordion-item wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.4s">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" data-bs-toggle="collapse"
                                                 data-bs-target="#faq3">
@@ -343,7 +359,8 @@
                                     </div>
 
                                     <!-- item -->
-                                    <div class="accordion-item wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                                    <div class="accordion-item wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.5s">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" data-bs-toggle="collapse"
                                                 data-bs-target="#faq4">
@@ -360,7 +377,8 @@
                                     </div>
 
                                     <!-- item -->
-                                    <div class="accordion-item wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                                    <div class="accordion-item wow animate__animated animate__fadeInUp"
+                                        data-wow-delay="0.6s">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" data-bs-toggle="collapse"
                                                 data-bs-target="#faq5">
@@ -394,7 +412,8 @@
                                 </a>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="footer-top-left wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                        <div class="footer-top-left wow animate__animated animate__fadeInUp"
+                                            data-wow-delay="0.3s">
                                             <h3>Property & Construction Finance for Businesses</h3>
                                         </div>
                                     </div>
@@ -441,7 +460,7 @@
 
     <!-- WOW js -->
     <script src="assets/js/wow.min.js"></script>
-    
+
     <!-- Iconify -->
     <script src="assets/js/iconify.min.js"></script>
 

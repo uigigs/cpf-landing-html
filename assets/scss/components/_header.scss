@@ -4,6 +4,70 @@
   left: 0;
   z-index: 999;
   width: 100%;
+  transition: 0.5s;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    
+    animation: headerSlideDown 0.4s ease forwards;
+    .header-inner {
+      padding: 10px 0;
+
+      .header-left {
+        .logo {
+          max-width: 130px;
+          .white-logo{
+            display: none;
+          }
+          .dark-logo{
+            display: block;
+          }
+        }
+      }
+    }
+
+    &.header-white {
+      .header-inner {
+        .header-left {
+          .call {
+            .number {
+              color: color(SecondaryColor);
+              background: #0127540A;
+            }
+          }
+        }
+
+        .header-right {
+          ul {
+            li {
+              a {
+                color: color(SecondaryColor);
+              }
+            }
+          }
+        }
+      }
+
+      .menu-btn {
+        color: color(SecondaryColor);
+      }
+    }
+  }
+}
+
+@keyframes headerSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .header-inner {
@@ -12,6 +76,7 @@
   justify-content: space-between;
   gap: 30px;
   padding: 20px 0;
+  transition: 0.3s;
 
   .header-left {
     display: flex;
@@ -24,7 +89,12 @@
       align-items: center;
       justify-content: center;
       max-width: 196px;
-
+      .dark-logo{
+        display: block;
+      }
+      .white-logo{
+        display: none;
+      }
       img {
         width: 100%;
       }
@@ -85,7 +155,7 @@
 
 }
 
-.menu-btn{
+.menu-btn {
   display: none;
   align-items: center;
   justify-content: center;
@@ -97,70 +167,92 @@
   font-size: 28px;
   color: color(SecondaryColor);
 }
-.mobile-menu{
+
+.mobile-menu {
   display: none;
-  .offcanvas{
+
+  .offcanvas {
     max-width: 300px;
   }
-  .btn-close{
+
+  .btn-close {
     opacity: 1 !important;
     margin-top: -35px;
     color: color(SecondaryColor);
     outline: none;
     border: none;
   }
-  .mobile-menu-header{
+
+  .mobile-menu-header {
     border-bottom: 1px solid #0126542f;
   }
-  ul{
+
+  ul {
     margin-bottom: 20px;
-    li{
+
+    li {
       margin-bottom: 15px;
-      a{
+
+      a {
         font-size: 16px;
         color: color(SecondaryColor);
         text-decoration: none;
-        
+
       }
     }
   }
 }
-.mobile-menu-logo{
+
+.mobile-menu-logo {
   max-width: 130px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  img{
+
+  img {
     width: 100%;
   }
 }
 
-.header-white{
+.header-white {
   .header-inner {
-  .header-left {
-    .call {
-      .number{
-        color: color(whiteColor);
-        background: #FFFFFF0D;
+    .header-left {
+      .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 196px;
+      .dark-logo{
+        display: none;
+      }
+      .white-logo{
+        display: block;
       }
     }
-  }
+      .call {
+        .number {
+          color: color(whiteColor);
+          background: #FFFFFF0D;
+        }
+      }
+    }
+
     .header-right {
-      ul{
-        li{
-          a{
+      ul {
+        li {
+          a {
             color: color(whiteColor);
           }
         }
       }
     }
   }
-  .menu-btn{
+
+  .menu-btn {
     color: color(whiteColor);
   }
 }
-
 @media only screen and (max-width: 1360px) {
   .header-inner {
     .header-left {
@@ -172,14 +264,17 @@
 }
 @media only screen and (max-width: 1200px) {
   .header-inner {
-    padding: 12px 0px;
+    padding: 12px 0;
     gap: 20px;
+
     .header-left {
       gap: 30px;
+
       .logo {
         max-width: 130px;
       }
     }
+
     .header-left {
       .call {
         min-width: max-content;
@@ -214,23 +309,24 @@
     }
   }
 }
-
 @media only screen and (max-width: 991px) {
-  .menu-btn{
+  .menu-btn {
     display: flex;
   }
-  .mobile-menu{
+
+  .mobile-menu {
     display: block;
   }
-  .header-inner{
-    .header-right{
+
+  .header-inner {
+    .header-right {
       display: none;
     }
-    .header-left{
+
+    .header-left {
       justify-content: space-between;
       width: 100%;
     }
   }
-  
-}
 
+}

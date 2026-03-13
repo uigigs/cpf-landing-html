@@ -16,39 +16,48 @@
         });
     }
 
+
+
     // ===== Smooth Scroll for Anchors (Home Page + Other Pages) =====
-document.addEventListener("DOMContentLoaded", () => {
-    // 1️⃣ Handle page load with hash (when redirected from another page)
-    const hash = window.location.hash;
-    if (hash) {
-        const target = document.querySelector(hash);
-        if (target && smoother) {
-            // Small delay to ensure everything is rendered
-            setTimeout(() => {
-                smoother.scrollTo(target, true);
-            }, 100);
-        }
-    }
-
-    // 2️⃣ Handle clicks on menu/anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            const href = this.getAttribute("href");
-
-            // If already on home page, smooth scroll
-            if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
-                const target = document.querySelector(href);
-                if (target && smoother) {
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1️⃣ Handle page load with hash (when redirected from another page)
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target && smoother) {
+                // Small delay to ensure everything is rendered
+                setTimeout(() => {
                     smoother.scrollTo(target, true);
-                }
-            } else {
-                // If on another page, redirect to home with hash
-                window.location.href = `./index.html${href}`;
+                }, 100);
             }
+        }
+
+        // 2️⃣ Handle clicks on menu/anchor links
+        document.querySelectorAll('a[href*="#"]:not(.back-to-top)').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+
+                const url = this.getAttribute("href");
+                if (!url || url === "#") return;
+
+                const hash = url.substring(url.indexOf("#"));
+
+                if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+
+                    const target = document.querySelector(hash);
+
+                    if (target && smoother) {
+                        e.preventDefault();
+                        smoother.scrollTo(target, true);
+                    }
+
+                } else {
+                    e.preventDefault();
+                    window.location.href = `/index.html${hash}`;
+                }
+
+            });
         });
     });
-});
 
     // BannerParallax
     gsap.to(".banner-section", {

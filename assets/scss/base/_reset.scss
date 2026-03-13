@@ -28,6 +28,9 @@ html {
     background: #6d6d6d;
   }
 }
+#smooth-content{
+  transform: translateY(-scrollPosition);
+}
 
 body {
   font-family: "Funnel Display";

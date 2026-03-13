@@ -47,10 +47,8 @@
                 }
             });
 
-            // যদি validation fail হয়
             if (!valid) return;
 
-            // validation pass হলে email send
             emailjs.sendForm("service_91zqw1p", "template_3oxik3j", form)
                 .then(function () {
 
@@ -83,6 +81,38 @@
 
     });
 
+    // ===== Sticky Header =====
+    const header = document.querySelector(".header-section");
+
+    if (header) {
+
+        let lastScroll = 0;
+
+        ScrollTrigger.create({
+            start: 0,
+            end: "max",
+            onUpdate: (self) => {
+
+                let currentScroll = self.scroll();
+
+                if (currentScroll > lastScroll) {
+                    // scrolling down
+                    header.classList.remove("sticky");
+                    document.body.classList.remove("nav-expanded");
+                } else {
+                    // scrolling up
+                    header.classList.add("sticky");
+                }
+
+                if (currentScroll === 0) {
+                    header.classList.remove("sticky");
+                }
+
+                lastScroll = currentScroll;
+            }
+        });
+
+    }
     // close drawer
     document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(function (link) {
 
