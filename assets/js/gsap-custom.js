@@ -120,7 +120,7 @@
                 ScrollTrigger.create({
                     trigger: section,
                     start: "top top",
-                    end: "+=150",       // total scroll distance for animation
+                    end: "+=200",       // total scroll distance for animation
                     pin: section,
                     pinSpacing: false
                 });
@@ -131,7 +131,7 @@
                         trigger: section,
                         start: "top top",
                         end: "+=700",   // total scroll distance
-                        scrub: true
+                        scrub: true,
                     }
                 });
 
@@ -142,9 +142,9 @@
                     duration: 0.5
                 })
 
-                    // Step 2: move map + content up by 100px
+                    // Step 2: move map + content up by 50px
                     .to([mapImg, content], {
-                        y: -200,
+                        y: -50,
                         ease: "power1.out",
                         duration: 0.7,
                         paddingBottom: "200px",
