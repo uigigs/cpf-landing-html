@@ -82,6 +82,50 @@
         });
 
     });
+    
+    // close drawer
+    document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+        const offcanvasElement = document.getElementById("mobileMenu");
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+        if(offcanvas){
+            offcanvas.hide();
+        }
+
+        // wait for drawer close animation
+        setTimeout(function(){
+
+            if(target){
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+
+        }, 350);
+
+    });
+
+});
+
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: target
+      });
+    }
+  });
+});
 
     new WOW().init();
 

@@ -166,4 +166,22 @@
         });
 
     }
+    
+    
+    // fade up elements
+    gsap.utils.toArray(".banner-section h1, .banner-section h3").forEach((el, i) => {
+
+    gsap.from(el, {
+        y: 60,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        delay: i * 0.2,
+        scrollTrigger: {
+            trigger: ".banner-section",
+            start: "top 80%",
+        }
+    });
+
+});
 })(jQuery);
