@@ -1695,9 +1695,10 @@ h3.title {
   position: absolute;
   z-index: 0;
   bottom: -5px;
-  right: -7px;
+  left: 50%; /* start from center */
+  transform: translateX(-50%); /* center exactly */
+  width: calc(100vw - 1px); /* +100px to cover extra -50 to +50 */
   height: 100%;
-  width: 100%;
 }
 .product-guide-inner .section-title {
   max-width: 630px;
@@ -1738,10 +1739,6 @@ h3.title {
   }
 }
 .contact-section {
-  background: url(../images/bg/contact-bg.png);
-  background-size: 100vw auto;
-  background-repeat: no-repeat;
-  background-position: top center;
   padding: 120px 0px 100px 0px;
   position: relative;
 }
@@ -1751,7 +1748,7 @@ h3.title {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   z-index: 0;
 }
 

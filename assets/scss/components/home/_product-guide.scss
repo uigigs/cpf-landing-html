@@ -33,9 +33,11 @@
     position: absolute;
     z-index: 0;
     bottom: -5px;
-    right: -7px;
+    left: 50%;              /* start from center */
+    transform: translateX(-50%); /* center exactly */
+    width: calc(100vw + -1px); /* +100px to cover extra -50 to +50 */
     height: 100%;
-    width: 100%;
+    // display: none;
   }
   .section-title {
     max-width: 630px;
