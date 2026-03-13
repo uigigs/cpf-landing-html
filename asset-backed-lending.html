@@ -494,23 +494,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <script>
-        (function () {
-            emailjs.init("GoDIcfCVHRgOCB8Nz");
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            emailjs.sendForm("service_91zqw1p", "template_3oxik3j", this)
-                .then(function () {
-                    alert("Email Sent!");
-                }, function (error) {
-                    alert("Error: " + JSON.stringify(error));
-                });
-        });
-    </script>
-
 
 </body>
 

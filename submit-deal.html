@@ -147,7 +147,7 @@
                             <div class="col-lg-6 p-0">
                                 <div class="submit-deal-form-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                     <h3 class="title">Submit Your Deal</h3>
-                                    <form action="#">
+                                    <form id="contact-form" action="#" novalidate>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="input-fild">
@@ -175,7 +175,7 @@
                                                 <div class="input-fild">
                                                     <span class="required">Required</span>
                                                     <label for="Company">Company <span>*</span></label>
-                                                    <input type="text" name="Company" placeholder="Your company  name">
+                                                    <input type="text" name="Company" placeholder="Your company  name" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -191,7 +191,7 @@
                                                     <label for="FundingRequirement">Funding Requirement
                                                         <span>*</span></label>
                                                     <input type="text" name="FundingRequirement"
-                                                        placeholder="e.g. $2,500,000">
+                                                        placeholder="e.g. $2,500,000" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -199,7 +199,7 @@
                                                     <span class="required">Required</span>
                                                     <label for="FundingType">Funding Type <span>*</span></label>
                                                     <input type="text" name="FundingType"
-                                                        placeholder="e.g. Construction finance, land subdivision">
+                                                        placeholder="e.g. Construction finance, land subdivision" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -210,7 +210,7 @@
                                                         required></textarea>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <button type="submit" class="orange-btn custom-btn hov-btn icon-btn">
                                                     <span class="btn-text">
                                                         <span>Send Message</span>
@@ -465,23 +465,6 @@
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-        (function () {
-            emailjs.init("GoDIcfCVHRgOCB8Nz");
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            emailjs.sendForm("service_91zqw1p", "template_3oxik3j", this)
-                .then(function () {
-                    alert("Email Sent!");
-                }, function (error) {
-                    alert("Error: " + JSON.stringify(error));
-                });
-        });
-    </script>
 
 
 </body>

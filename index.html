@@ -526,21 +526,21 @@
                 <section class="contact-section" id="Contactus">
                     <div class="grid-pattern"></div>
                     <div class="container">
-                        <div class="contact-card">
+                        <div class="contact-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                             <div class="contact-card-left">
-                                <h3 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Speak with a Funding Specialist</h3>
-                                <img src="./assets/images/img/women.png" alt="img" class="women-img wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                                <div class="name wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Anna</div>
-                                <div class="company-name wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">Commercial Property Funding</div>
-                                <a href="tel:+0744399644" class="call-mail wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                <h3>Speak with a Funding Specialist</h3>
+                                <img src="./assets/images/img/women.png" alt="img" class="women-img">
+                                <div class="name">Anna</div>
+                                <div class="company-name">Commercial Property Funding</div>
+                                <a href="tel:+0744399644" class="call-mail">
                                     <div class="icon"><img src="./assets/images/icons/call.svg" alt="icon"></div>
                                     <div class="text">07 4439 9644</div>
                                 </a>
-                                <a href="mailto:anna@commercialpropertyfunding.com.au" class="call-mail wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                <a href="mailto:anna@commercialpropertyfunding.com.au" class="call-mail">
                                     <div class="icon"><img src="./assets/images/icons/mail.svg" alt="icon"></div>
                                     <div class="text">anna@commercialpropertyfunding.com.au</div>
                                 </a>
-                                <button class="secondary-btn custom-btn hov-btn icon-btn wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                <button class="secondary-btn custom-btn hov-btn icon-btn">
                                     <span class="btn-text">
                                         <span>Submit a Deal</span>
                                         <span>Submit a Deal</span>
@@ -554,8 +554,8 @@
                                 </button>
                             </div>
                             <div class="contact-card-right">
-                                <h3 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">We'd pleased to hear you</h3>
-                                <form id="contact-form" action="#" class="contact-form wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                <h3 >We'd pleased to hear you</h3>
+                                <form id="contact-form" action="#" class="contact-form" novalidate>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input-fild">
@@ -592,7 +592,7 @@
                                                     placeholder="Type your message"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <button type="submit" class="orange-btn custom-btn hov-btn icon-btn">
                                                 <span class="btn-text">
                                                     <span>Send Message</span>
@@ -618,20 +618,20 @@
                     <div class="overlay">
                         <img src="./assets/images/shape/footer-logo-shape.png" alt="img" class="footer-logo-shape">
                         <div class="container">
-                            <div class="footer-top">
+                            <div class="footer-top wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                 <a href="./index.html" class="footer-logo">
                                     <img src="./assets/images/logo/logo-white.png" alt="logo">
                                 </a>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="footer-top-left">
+                                        <div class="footer-top-left wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                             <h3>Property & Construction Finance for Businesses</h3>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="footer-bottom">
+                            <div class="footer-bottom wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                                 <p>Copyright ©2026 <a href="#">Commercial Property Funding</a> - All rights reserved.
                                 </p>
                                 <ul>
@@ -679,24 +679,6 @@
     <script src="assets/js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-        (function () {
-            emailjs.init("GoDIcfCVHRgOCB8Nz");
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            emailjs.sendForm("service_91zqw1p", "template_3oxik3j", this)
-                .then(function () {
-                    alert("Email Sent!");
-                }, function (error) {
-                    alert("Error: " + JSON.stringify(error));
-                });
-        });
-    </script>
-
 
 </body>
 
