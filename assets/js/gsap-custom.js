@@ -90,7 +90,7 @@
                 ScrollTrigger.create({
                     trigger: section,
                     start: "top top",
-                    end: "+=300",       // total scroll distance for animation
+                    end: "+=150",       // total scroll distance for animation
                     pin: section,
                     pinSpacing: false
                 });
