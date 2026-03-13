@@ -144,9 +144,9 @@
 
                     // Step 2: move map + content up by 50px
                     .to([mapImg, content], {
-                        y: -50,
+                        y: -90,
                         ease: "power1.out",
-                        duration: 0.7,
+                        duration: 2,
                         paddingBottom: "200px",
                     })
 
