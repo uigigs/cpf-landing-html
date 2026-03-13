@@ -1737,6 +1737,10 @@ h3.title {
   }
 }
 .contact-section {
+  background: url(../images/bg/contact-bg.png);
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: top center;
   padding: 120px 0px 100px 0px;
   position: relative;
 }
@@ -2094,7 +2098,7 @@ h3.title {
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 42px 50px 70px 50px;
+  padding: 42px 50px 70px;
 }
 .submit-deal-form-card .input-fild {
   margin-bottom: 5.2px;
@@ -2119,13 +2123,20 @@ h3.title {
     font-size: 32px;
   }
   .submit-deal-form-card {
-    padding: 30px 30px 50px;
+    padding: 30px 30px 40px;
   }
   .submit-deal-form-card .input-fild {
     margin-bottom: 0;
   }
   .submit-deal-form-card .input-fild label {
     font-size: 14px;
+  }
+  .submit-deal-form-card input {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .submit-deal-form-card textarea {
+    margin-bottom: 10px;
   }
   .call-mail-btn .call-mail .text {
     font-size: 16px;
@@ -2180,7 +2191,7 @@ h3.title {
     margin-top: -45px;
   }
   .submit-deal-form-card {
-    padding: 30px 15px 40px 15px;
+    padding: 30px 15px 40px;
   }
 }
 .process-section {

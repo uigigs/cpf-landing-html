@@ -110,7 +110,7 @@
   background: #FFFFFF;
   width: 100%;
   margin-left: auto;
-  padding: 42px 50px 70px 50px;
+  padding: 42px 50px 70px;
 
   .input-fild {
     margin-bottom: 5.2px;
@@ -144,7 +144,7 @@
   }
 
   .submit-deal-form-card {
-    padding: 30px 30px 50px;
+    padding: 30px 30px 40px;
 
     .input-fild {
       margin-bottom: 0;
@@ -152,6 +152,15 @@
       label {
         font-size: 14px;
       }
+    }
+
+    input {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      margin-bottom: 10px;
     }
   }
 
@@ -224,8 +233,8 @@
       margin-top: -45px;
     }
   }
-  
-  .submit-deal-form-card{
-    padding: 30px 15px 40px 15px;
+
+  .submit-deal-form-card {
+    padding: 30px 15px 40px;
   }
 }
