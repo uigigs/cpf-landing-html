@@ -16,18 +16,39 @@
         });
     }
 
-    // handle nav link click
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const target = document.querySelector(this.getAttribute("href"));
-
-            if (target && smoother) {
+    // ===== Smooth Scroll for Anchors (Home Page + Other Pages) =====
+document.addEventListener("DOMContentLoaded", () => {
+    // 1️⃣ Handle page load with hash (when redirected from another page)
+    const hash = window.location.hash;
+    if (hash) {
+        const target = document.querySelector(hash);
+        if (target && smoother) {
+            // Small delay to ensure everything is rendered
+            setTimeout(() => {
                 smoother.scrollTo(target, true);
+            }, 100);
+        }
+    }
+
+    // 2️⃣ Handle clicks on menu/anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            // If already on home page, smooth scroll
+            if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+                const target = document.querySelector(href);
+                if (target && smoother) {
+                    smoother.scrollTo(target, true);
+                }
+            } else {
+                // If on another page, redirect to home with hash
+                window.location.href = `./index.html${href}`;
             }
         });
     });
+});
 
     // BannerParallax
     gsap.to(".banner-section", {
