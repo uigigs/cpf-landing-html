@@ -1,85 +1,99 @@
 (function ($) {
     "use strict";
+
+    // contact form
     document.addEventListener("DOMContentLoaded", function () {
 
-        (function () {
-            emailjs.init("GoDIcfCVHRgOCB8Nz");
-        })();
+    // Initialize EmailJS
+    emailjs.init("GoDIcfCVHRgOCB8Nz");
 
-        const form = document.querySelector("#contact-form");
-        if (!form) return;
+    const form = document.querySelector("#contact-form");
+    if (!form) return;
 
-        const requiredFields = form.querySelectorAll("input[required], textarea[required]");
+    const requiredFields = form.querySelectorAll("input[required], textarea[required]");
 
-        function validateField(input) {
+    // Email regex
+    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
-            const field = input.closest(".input-fild");
-            if (!field) return true;
+    // Validate a single field
+    function validateField(input) {
 
-            const requiredMsg = field.querySelector(".required");
+        const field = input.closest(".input-fild");
+        if (!field) return true;
 
-            if (input.value.trim() === "") {
+        // Trim value
+        let value = input.value.trim();
 
-                field.classList.add("required-fild");
-                if (requiredMsg) requiredMsg.style.display = "block";
-
-                return false;
-
-            } else {
-
-                field.classList.remove("required-fild");
-                if (requiredMsg) requiredMsg.style.display = "none";
-
-                return true;
-
-            }
+        // Force lowercase if email
+        if (input.type === "email") {
+            value = value.toLowerCase();
+            input.value = value;
         }
 
-        form.addEventListener("submit", function (e) {
+        // Reset classes
+        field.classList.remove("required-fild", "invalid-fild");
 
-            e.preventDefault();
+        // Empty check
+        if (value === "") {
+            field.classList.add("required-fild");
+            return false;
+        }
 
-            let valid = true;
+        // Email format check
+        if (input.type === "email" && !emailPattern.test(value)) {
+            field.classList.add("invalid-fild");
+            return false;
+        }
 
-            requiredFields.forEach(function (input) {
-                if (!validateField(input)) {
-                    valid = false;
-                }
-            });
+        return true;
+    }
 
-            if (!valid) return;
+    // Form submit
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            emailjs.sendForm("service_91zqw1p", "template_3oxik3j", form)
-                .then(function () {
+        let isValid = true;
 
-                    alert("Email Sent!");
-                    form.reset();
-
-                    // reset validation UI
-                    document.querySelectorAll(".required").forEach(el => el.style.display = "none");
-                    document.querySelectorAll(".required-fild").forEach(el => el.classList.remove("required-fild"));
-
-                })
-                .catch(function (error) {
-                    alert("Error: " + JSON.stringify(error));
-                });
-
+        requiredFields.forEach(input => {
+            if (!validateField(input)) isValid = false;
         });
 
-        // live validation
-        requiredFields.forEach(function (input) {
+        if (!isValid) return;
 
-            input.addEventListener("input", function () {
-                validateField(input);
+        // Send email via EmailJS
+        emailjs.sendForm("service_91zqw1p", "template_3oxik3j", form)
+            .then(() => {
+                alert("Email Sent!");
+                form.reset();
+
+                // Reset all error classes
+                document.querySelectorAll(".input-fild")
+                    .forEach(el => el.classList.remove("required-fild", "invalid-fild"));
+
+            })
+            .catch(error => {
+                alert("Error: " + JSON.stringify(error));
             });
 
-            input.addEventListener("blur", function () {
-                validateField(input);
-            });
+    });
 
+    // Live validation on input and blur
+    requiredFields.forEach(input => {
+
+        input.addEventListener("input", function () {
+            validateField(input);
+        });
+
+        input.addEventListener("blur", function () {
+            validateField(input);
         });
 
     });
+
+});
+
+
+
 
     // ===== Sticky Header =====
     const header = document.querySelector(".header-section");

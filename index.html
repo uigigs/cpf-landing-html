@@ -526,16 +526,18 @@
                                 <p>Download the latest Commercial Property Funding product guide including loan
                                     parameters, lending criteria and project types</p>
                             </div>
-                            <a href="./assets/pdf/cpf-product-guide.pdf" target="_blank"
-                                class="primary-btn custom-btn download-btn reverse-hov-btn wow animate__animated animate__fadeInUp"
-                                data-wow-delay="0.3s">
-                                <span class="btn-text">
-                                    <span>Download Product Guide <span class="iconify"
-                                            data-icon="mdi:arrow-bottom"></span></span>
-                                    <span>Download Product Guide <span class="iconify"
-                                            data-icon="mdi:arrow-bottom"></span></span>
-                                </span>
-                            </a>
+                            <div class="download-btn">
+                                <a href="./assets/pdf/cpf-product-guide.pdf" target="_blank"
+                                    class="primary-btn custom-btn reverse-hov-btn wow animate__animated animate__fadeInUp"
+                                    data-wow-delay="0.3s">
+                                    <span class="btn-text">
+                                        <span>Download Product Guide <span class="iconify"
+                                                data-icon="mdi:arrow-bottom"></span></span>
+                                        <span>Download Product Guide <span class="iconify"
+                                                data-icon="mdi:arrow-bottom"></span></span>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -585,8 +587,9 @@
                                         <div class="col-md-6">
                                             <div class="input-fild">
                                                 <span class="required">Required</span>
+                                                <span class="invalid-email">Invalid email !</span>
                                                 <label for="">Email <span>*</span></label>
-                                                <input type="email" name="email" placeholder="Your email" required>
+                                                <input type="email" name="email" placeholder="Your email" required autocomplete="email">
                                             </div>
                                         </div>
 

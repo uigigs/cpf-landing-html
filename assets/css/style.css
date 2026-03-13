@@ -1808,7 +1808,7 @@ h3.title {
   }
 }
 .contact-section {
-  padding: 120px 0px 100px 0px;
+  padding: 120px 0 100px;
   position: relative;
 }
 .contact-section .grid-pattern {
@@ -1845,7 +1845,7 @@ h3.title {
   font-weight: 600;
   font-size: 36px;
   line-height: 138%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: #ffffff;
   max-width: 400px;
@@ -1866,7 +1866,7 @@ h3.title {
   font-weight: 500;
   font-size: 36px;
   line-height: 138%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   width: 330px;
   text-align: right;
   color: #ffffff;
@@ -1877,7 +1877,7 @@ h3.title {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: #ffffff;
   padding: 10px 15px;
   margin-left: auto;
@@ -1943,7 +1943,7 @@ h3.title {
   font-weight: 600;
   font-size: 36px;
   line-height: 138%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: #012754;
   max-width: 265px;
@@ -1960,6 +1960,13 @@ h3.title {
 .input-fild.required-fild textarea {
   border: 1px solid rgba(255, 55, 58, 0.3019607843);
 }
+.input-fild.invalid-fild .invalid-email {
+  display: block !important;
+}
+.input-fild.invalid-fild input {
+  border: 1px solid rgba(255, 55, 58, 0.3019607843);
+}
+.input-fild .invalid-email,
 .input-fild .required {
   position: absolute;
   top: 3px;
@@ -1967,7 +1974,7 @@ h3.title {
   font-weight: 500;
   font-size: 13px;
   line-height: 28px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: right;
   color: #FF373A;
   display: none;
@@ -1992,7 +1999,7 @@ h3.title {
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: #012754;
   margin-bottom: 16px;
   outline: none;
@@ -2006,7 +2013,7 @@ h3.title {
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: #012754;
   margin-bottom: 20px;
   outline: none;
@@ -2014,12 +2021,12 @@ h3.title {
 
 @media only screen and (max-width: 1200px) {
   .contact-section {
-    padding: 80px 0px;
+    padding: 80px 0;
   }
 }
 @media only screen and (max-width: 991px) {
   .contact-section {
-    padding: 70px 0px;
+    padding: 70px 0;
   }
   .contact-card {
     flex-wrap: wrap;
@@ -2036,7 +2043,7 @@ h3.title {
 }
 @media only screen and (max-width: 768px) {
   .contact-section {
-    padding: 60px 0px;
+    padding: 60px 0;
   }
 }
 @media only screen and (max-width: 575px) {
