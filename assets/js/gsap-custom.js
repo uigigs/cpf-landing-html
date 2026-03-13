@@ -179,7 +179,7 @@
         // === Scroll Down Effect ===
         ScrollTrigger.create({
             trigger: FlotingSection,
-            start: "top 300",
+            start: "top 370",
             end: () => `bottom 900`,
             pin: card,
             pinSpacing: false,
