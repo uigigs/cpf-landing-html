@@ -3200,6 +3200,7 @@ h3.title {
   }
   .footer-bottom {
     padding-top: 0;
+    padding-right: 40px;
   }
   .footer-bottom p {
     padding-right: 20px;
@@ -3210,6 +3211,6 @@ h3.title {
 }
 @media only screen and (max-width: 400px) {
   .footer-bottom ul {
-    gap: 16px;
+    gap: 20px;
   }
 }

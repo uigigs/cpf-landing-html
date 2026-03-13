@@ -218,6 +218,7 @@
 
   .footer-bottom {
     padding-top: 0;
+    padding-right: 40px;
 
     p {
       padding-right: 20px;
@@ -230,6 +231,6 @@
 }
 @media only screen and (max-width: 400px) {
   .footer-bottom ul {
-    gap: 16px;
+    gap: 20px;
   }
 }
